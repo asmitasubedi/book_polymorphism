@@ -51,8 +51,9 @@ double Novel :: getValue()
 
 string Novel :: toString()
 {
-    stringstream totalValue;
+    stringstream totalValue, rating;
     totalValue << getValue();
-    return "Novel: " + getBookName() + " of Genre: " + getWhichGenre() + " with ratings(out 0f 10): " + getRatings() + " and total price: " + totalValue.str();
+    rating << getRatings();
+    return "Novel: " + getBookName() + " of Genre: " + getWhichGenre() + " with ratings(out 0f 10): " + rating.str() + " and total price: " + totalValue.str();
 }
 
